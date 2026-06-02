@@ -1,0 +1,454 @@
+```html
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комерційна пропозиція | ПОК Вітряки</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            800: '#075985',
+                            900: '#0f172a', // Deep Slate
+                        },
+                        accent: {
+                            500: '#f59e0b', // Amber/Gold
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Fallback for missing images */
+        img { background-color: #e2e8f0; object-fit: cover; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <!-- Логотип -->
+                <img src="logo.webp" alt="ПОК Вітряки" class="h-12 md:h-16 w-auto object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/1046x375/0f172a/ffffff?text=ПОК+Вітряки';">
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-500">
+                <a href="#technical" class="hover:text-brand-500 transition-colors">Рішення</a>
+                <a href="#pricing" class="hover:text-brand-500 transition-colors">Вартість</a>
+                <a href="#why-us" class="hover:text-brand-500 transition-colors">Чому ми</a>
+                <a href="#next-steps" class="bg-brand-900 text-white px-5 py-2 rounded-full hover:bg-brand-800 transition-colors">Наступні кроки</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-brand-900 text-white py-20 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 rounded-full px-4 py-1 mb-6 text-sm font-medium border border-white/20">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span>Індивідуальний проєкт</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Проєктування та монтаж системи вентиляції ресторану <span class="text-accent-500">«Вітряк»</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+                    Головне завдання проєкту — повністю виключити проникнення кухонних запахів до гостьової зали.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="glass-card rounded-2xl p-8 shadow-xl border border-slate-100 flex flex-col h-full transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="w-12 h-12 rounded-lg bg-brand-50 text-brand-500 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-cogs"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Що ми пропонуємо</h3>
+                <p class="text-slate-600 leading-relaxed flex-grow">
+                    Професійне дооснащення системи вентиляції кухні на базі надійного обладнання <strong>Aerostar</strong> та використання ефективних припливно-витяжних зонтів.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="glass-card rounded-2xl p-8 shadow-xl border border-slate-100 flex flex-col h-full transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="w-12 h-12 rounded-lg bg-green-50 text-green-600 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Що ви отримуєте</h3>
+                <p class="text-slate-600 leading-relaxed flex-grow">
+                    Відсутність кухонних запахів у залі, комфорт для клієнтів та персоналу, довговічну систему із простим обслуговуванням та скорочення витрат на зимове опалення на 30%.
+                </p>
+            </div>
+            <!-- Card 3 (Highlight) -->
+            <div class="glass-card rounded-2xl p-8 shadow-xl border-2 border-brand-500 bg-brand-900 text-white flex flex-col h-full transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="w-12 h-12 rounded-lg bg-white/10 text-accent-500 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Загальна вартість «під ключ»</h3>
+                <div class="mt-auto">
+                    <div class="text-4xl font-bold text-accent-500 mb-2">660 000 <span class="text-2xl font-medium text-white/80">грн</span></div>
+                    <p class="text-sm text-white/70">Орієнтовна вартість повного циклу робіт</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section id="technical" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Детальний опис технічного рішення</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Principle -->
+            <div class="bg-slate-50 rounded-2xl p-8 md:p-10 mb-16 border border-slate-100 shadow-sm">
+                <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                    <i class="fa-solid fa-wind text-brand-500 mr-3"></i> Принцип роботи системи
+                </h3>
+                <div class="prose prose-slate max-w-none text-slate-600 text-lg leading-relaxed space-y-4">
+                    <p>
+                        Ми забезпечуємо кухонну зону необхідним об'ємом витяжного повітря, а в коридор подаємо припливне повітря. Цей потік створює м'який повітряний бар'єр, який фізично передавлює маси назад у бік кухні.
+                    </p>
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg mt-6">
+                        <p class="text-amber-800 m-0">
+                            <strong>Важливо:</strong> Наша пропозиція передбачає обов'язкову зміну розташування вже існуючого кухонного обладнання. Це дозволить максимально ефективно використати корисну площу припливно-витяжного зонта та значно покращити якість вловлювання гарячого повітря й пари безпосередньо над робочими зонами.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold mb-10 text-center">Специфікація обладнання <span class="text-slate-400 text-lg font-normal">(Співвідношення ціна/якість)</span></h3>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Для реалізації проєкту підібрано обладнання від провідного українського виробника <strong>Aerostar</strong>.</p>
+
+            <!-- Grid Layout for Equipment -->
+            <div class="space-y-16">
+                
+                <!-- Fan Item (Text Left, Image Right) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <h4 class="text-xl font-bold mb-3 text-slate-900">Кухонний витяжний вентилятор</h4>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Розрахований на тривалу роботу з жирним та гарячим повітрям. Конструкція передбачає легкий доступ для регулярного сервісного обслуговування крильчатки, що захищає двигун і гарантує довговічність системи.
+                        </p>
+                        <ul class="space-y-2 mt-6">
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-green-500 mr-2"></i> Висока стійкість до жиру та температур
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-green-500 mr-2"></i> Легкий доступ для сервісу
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <!-- Зображення вентилятора -->
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border border-slate-100 p-2 bg-white">
+                            <img src="12.webp" alt="Витяжний вентилятор" class="w-full h-full object-cover rounded-xl" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600/f1f5f9/94a3b8?text=Фото+вентилятора';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Only Block -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-slate-900 text-white p-8 md:p-12 rounded-3xl shadow-lg">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-fan text-brand-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Припливна установка</h4>
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Забезпечує компенсацію витяжного повітря. Оснащена вбудованим фільтром та електронагрівачем потужністю 21 кВт. Дане споживання є максимальним і задіюється лише в пікові зимові морози; у весь інший час автоматика адаптує потужність під поточну вуличну температуру, заощаджуючи ресурси.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-sliders text-accent-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Щит керування</h4>
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Оснащений частотними перетворювачами. Забезпечує безпеку роботи системи, захищає двигуни від перебоїв живлення чи стрибків напруги та дозволяє плавно й точно регулювати об'єми повітря.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hood Item (Image Left, Text Right) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-1 lg:order-1">
+                        <!-- Зображення зонта -->
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border border-slate-100 p-2 bg-white relative">
+                            <div class="absolute top-4 right-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">Особливість пропозиції</div>
+                            <img src="123.webp" alt="Припливно-витяжний зонт" class="w-full h-full object-cover rounded-xl relative z-0" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x600/f1f5f9/94a3b8?text=Фото+зонта';">
+                        </div>
+                    </div>
+                    <div class="order-2 lg:order-2">
+                        <h4 class="text-2xl font-bold mb-4 text-slate-900">Припливно-витяжні зонти спеціальної конструкції</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Дане інженерне рішення є особливим завдяки використанню зонтів спеціальної конструкції. Вони мають суттєву перевагу перед стандартними рішеннями.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                        <i class="fa-solid fa-arrow-trend-down text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-md font-bold text-slate-800">Економія повітря</h5>
+                                    <p class="text-sm text-slate-600">Зменшують потребу в загальному об'ємі повітря на 30% без втрати ефективності вловлювання забруднень.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-8 h-8 rounded-full bg-accent-100 flex items-center justify-center text-accent-600">
+                                        <i class="fa-solid fa-fire text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-md font-bold text-slate-800">Економія на опаленні</h5>
+                                    <p class="text-sm text-slate-600">Прямо пропорційно знижують витрати на опалення взимку, оскільки системі потрібно підігрівати на третину менше холодного повітря з вулиці.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section id="pricing" class="py-16 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Деталізація вартості реалізації об'єкта</h2>
+                <p class="text-slate-500">Попередній кошторис основних статей витрат</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="py-4 px-6 font-semibold text-sm uppercase tracking-wider">Найменування</th>
+                            <th class="py-4 px-6 font-semibold text-sm uppercase tracking-wider text-right">Сума, грн</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Припливно-витяжні зонти</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">35 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Обладнання Аеростар</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">330 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Матеріали</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">90 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Монтажні роботи</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">80 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Транспортні витрати та відрядження</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">50 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Адміністративні витрати</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">40 000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="py-4 px-6 text-slate-700">Розробка проєкту, деталювання, аудит</td>
+                            <td class="py-4 px-6 text-right font-medium text-slate-900">35 000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="bg-slate-50 border-t-2 border-slate-200">
+                        <tr>
+                            <td class="py-5 px-6 font-bold text-slate-900 text-lg">Загальна вартість за деталізацією</td>
+                            <td class="py-5 px-6 text-right font-bold text-brand-800 text-xl">660 000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="py-2 px-6 text-xs text-slate-500 text-center italic bg-white border-t border-slate-100">
+                                * Значення є концептуальними. Фінальна вартість проєкту «під ключ» фіксується після етапу проєктування (орієнтир ~660 000 грн).
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-500 font-bold tracking-wider uppercase text-sm mb-2 block">Переваги підрядника</span>
+                <h2 class="text-3xl font-bold text-slate-900 flex items-center justify-center gap-3">
+                    <i class="fa-regular fa-handshake text-accent-500"></i> Чому саме наша компанія?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Advantage 1 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow bg-slate-50/50">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Гарантія безперервності</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Усі ключові керівники та монтажні бригади нашої компанії офіційно заброньовані або мають відстрочку. Це ліквідує будь-які ризики раптової зупинки робіт на об'єкті — ми чітко виконуємо зобов'язання за договором у затверджені терміни.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow bg-slate-50/50">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Профільна експертиза з Aerostar</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Наш персонал пройшов спеціалізоване навчання безпосередньо у навчальному центрі виробника Aerostar, що гарантує правильний підбір, монтаж та налаштування автоматики.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow bg-slate-50/50">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Масштабний досвід у HoReCa</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Ми є постійним підрядником мережі супермаркетів «Велмарт» і успішно реалізували системи вентиляції для їхніх фудкортів по всій Україні. Ми знаємо специфіку роботи кухонь.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow bg-slate-50/50">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl">
+                            <i class="fa-regular fa-folder-open"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Прозоре портфоліо</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Переконатися в рівні нашої інженерної етики, ви можете, переглянувши наш референс-лист об'єктів.
+                        </p>
+                        <a href="https://khromenkoyegor-star.github.io/ReferenceLetter/" target="_blank" class="inline-flex items-center mt-3 text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">
+                            Дивитись портфоліо <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section id="next-steps" class="py-20 bg-brand-900 text-white relative overflow-hidden">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-800 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-accent-900 opacity-20 blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Наступні кроки та план співпраці</h2>
+                <p class="text-brand-100 max-w-2xl mx-auto text-lg">
+                    Надана вище пропозиція є концептуальним розрахунком. Щоб зафіксувати остаточну вартість і отримати точне технічне рішення, наступним кроком є <strong class="text-white">розробка інженерного проєкту</strong>.
+                </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20">
+                <div class="flex flex-col md:flex-row items-center justify-between border-b border-white/20 pb-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent-400 mb-2">Формат взаємодії</h3>
+                        <p class="text-slate-300">На розробку проєкту вноситься авансовий платіж.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-right">
+                        <div class="text-3xl font-bold">35 000 грн</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-wide">вартість послуги</div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-6">Що входить у цю вартість:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="flex flex-col relative pb-4 md:pb-0">
+                        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center font-bold text-lg mb-4 shadow-lg">1</div>
+                        <p class="text-sm text-slate-200">Виїзд на об'єкт для проведення точних замірів приміщення.</p>
+                    </div>
+                    <div class="flex flex-col relative pb-4 md:pb-0">
+                        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center font-bold text-lg mb-4 shadow-lg">2</div>
+                        <p class="text-sm text-slate-200">Детальне опитування старшої кухні та замовника для формування індивідуального ТЗ.</p>
+                    </div>
+                    <div class="flex flex-col relative">
+                        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center font-bold text-lg mb-4 shadow-lg">3</div>
+                        <p class="text-sm text-slate-200">Робота інженера-проєктувальника (розрахунки аеродинаміки, балансу та завантаження обладнання).</p>
+                    </div>
+                </div>
+
+                <div class="bg-brand-950/50 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-800">
+                    <div>
+                        <span class="bg-accent-500 text-slate-900 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Результат етапу</span>
+                        <p class="text-slate-200 text-sm">
+                            На основі створеного проєкту ми надаємо вам <strong class="text-white">остаточну комерційну пропозицію</strong> та повне деталювання (специфікацію всіх матеріалів та робіт).
+                        </p>
+                    </div>
+                    <button class="bg-accent-500 hover:bg-accent-400 text-slate-900 font-bold py-3 px-8 rounded-full whitespace-nowrap transition-all shadow-[0_0_15px_rgba(245,158,11,0.5)] transform hover:scale-105">
+                        Почати роботу
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <img src="logo.webp" alt="ПОК Вітряки" class="h-8 opacity-50 grayscale" onerror="this.style.display='none';">
+                <span class="text-sm">© 2024 Повітрообробна компанія «ПОК Вітряки».</span>
+            </div>
+            <div class="text-sm">
+                Комерційна пропозиція для ресторану «Вітряк»
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+```
